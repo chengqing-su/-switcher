@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "switcher"
+require "env_switcher"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

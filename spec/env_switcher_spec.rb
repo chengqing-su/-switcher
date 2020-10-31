@@ -1,6 +1,6 @@
-RSpec.describe Switcher do
+RSpec.describe EnvSwitcher do
   it "has a version number" do
-    expect(Switcher::VERSION).not_to be nil
+    expect(EnvSwitcher::VERSION).not_to be nil
   end
 
   it "does something useful" do

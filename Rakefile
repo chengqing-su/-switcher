@@ -7,8 +7,8 @@ require "rake/extensiontask"
 
 task :build => :compile
 
-Rake::ExtensionTask.new("switcher") do |ext|
-  ext.lib_dir = "lib/switcher"
+Rake::ExtensionTask.new("env_switcher") do |ext|
+  ext.lib_dir = "lib/env_switcher"
 end
 
 task :default => [:clobber, :compile, :spec]

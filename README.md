@@ -1,4 +1,4 @@
-# Switcher
+# Env Switcher
 
 This a small tool to switch you aws credential and kubernetes contexts interactively.
 
@@ -7,7 +7,7 @@ This a small tool to switch you aws credential and kubernetes contexts interacti
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'switcher'
+gem 'env_switcher'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install switcher
+    $ gem install env_switcher
 
 ## Usage
 
@@ -24,7 +24,7 @@ This tool depends on `aws-cli` and `kubectl`.
 
 Run 
 ```
-switcher
+env_switcher
 ```
 
 ## Development

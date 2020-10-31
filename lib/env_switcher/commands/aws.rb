@@ -1,6 +1,6 @@
 require 'json'
 
-module Switcher
+module EnvSwitcher
   module Commands
     class Aws < Clamp::Command
 
@@ -88,7 +88,7 @@ output=json"
       end
 
       def aws_config_path
-        File.expand_path('~/.switcher/aws/config.json')
+        File.expand_path('~/.env_switcher/aws/config.json')
       end
 
       def prompt
@@ -100,8 +100,8 @@ output=json"
       end
 
       def ensure_aws_config_dir
-        ensure_dir '~/.switcher'
-        ensure_dir '~/.switcher/aws'
+        ensure_dir '~/.env_switcher'
+        ensure_dir '~/.env_switcher/aws'
       end
 
       def ensure_dir(dir_name)

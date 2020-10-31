@@ -1,6 +1,6 @@
 require 'yaml'
 
-module Switcher
+module EnvSwitcher
   module Commands
     class Kubernetes < Clamp::Command
       subcommand 'switch', 'switch kubernetes context' do

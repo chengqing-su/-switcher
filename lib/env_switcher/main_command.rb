@@ -1,19 +1,19 @@
 require 'clamp'
 require 'tty-prompt'
-require 'switcher/commands/aws'
-require 'switcher/commands/kubernetes'
+require 'env_switcher/commands/aws'
+require 'env_switcher/commands/kubernetes'
 
-module Switcher
+module EnvSwitcher
   class MainCommand < Clamp::Command
 
     option "--version", :flag, "Show version" do
-      puts Switcher::VERSION
+      puts EnvSwitcher::VERSION
     end
 
     def execute
       command = prompt.select("What do you want to do?") do |menu|
-        menu.choice "AWS", -> { Switcher::Commands::Aws }
-        menu.choice "Kubernetes", -> { Switcher::Commands::Kubernetes }
+        menu.choice "AWS", -> { EnvSwitcher::Commands::Aws }
+        menu.choice "Kubernetes", -> { EnvSwitcher::Commands::Kubernetes }
       end
       choice_command(command)
     end

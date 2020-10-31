@@ -1,23 +1,23 @@
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'switcher/version'
+require 'env_switcher/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "switcher"
-  spec.version       = Switcher::VERSION
+  spec.name          = "env_switcher"
+  spec.version       = EnvSwitcher::VERSION
   spec.authors       = ["Chengqing Su"]
   spec.email         = ["suchengqing1995@gmail.com"]
 
   spec.summary       = "This is a tool to help you switch env, eg. aws account, k8s context"
   spec.description   = "This is a tool to help you switch env, eg. aws account, k8s context"
-  spec.homepage      = "https://github.com/chengqing-su/switcher"
+  spec.homepage      = "https://github.com/chengqing-su/env-env_switcher"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/chengqing-su/switcher.git"
-  spec.metadata["changelog_uri"] = "https://github.com/chengqing-su/switcher"
+  spec.metadata["source_code_uri"] = "https://github.com/chengqing-su/env_switcher.git"
+  spec.metadata["changelog_uri"] = "https://github.com/chengqing-su/env_switcher"
 
   spec.add_dependency 'clamp', '~> 1.3.2'
   spec.add_dependency 'tty-config', '~> 0.4.0'
@@ -35,5 +35,5 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-  spec.extensions    = ["ext/switcher/extconf.rb"]
+  spec.extensions    = ["ext/env_switcher/extconf.rb"]
 end
